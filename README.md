@@ -1,11 +1,11 @@
-# AutiobooksQT: Automatically Convert EPUBs to Autiobooks
+# AudiobooksQT: Automatically Convert EPUBs to Audiobooks
 [![Installing via pip and running](https://github.com/plusuncold/autiobooks/actions/workflows/pip-install.yaml/badge.svg)](https://github.com/plusuncold/autiobooks/actions/workflows/pip-install.yaml)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/autiobooks)
 ![PyPI - Version](https://img.shields.io/pypi/v/autiobooks)
 
-AutiobooksQT generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
+AudiobooksQT generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
 
-[Insert screenshot here]
+![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/Screenshot%202025-03-16%20133103.png)
 
 ## Features
 
@@ -83,7 +83,7 @@ The program creates .wav files for each chapter, then combines them into a .m4b 
 
 PRs are welcome! This project is open to contributions and improvements.
 
-GitHub Repository: [github.com/scottpeterman/autiobooksqt](https://github.com/scottpeterman/autiobooksqt)
+GitHub Repository: [github.com/scottpeterman/autiobooksqta](https://github.com/scottpeterman/autiobooksqta)
 
 ## Credits
 
