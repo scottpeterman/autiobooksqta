@@ -6,10 +6,6 @@ AudiobooksQTa generates `.m4b` audiobooks from regular `.epub` e-books, using Ko
 
 ![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/options.png)
 
-# AutobooksQTA
-
-A PyQt6-based application for converting EPUB books to audiobooks in multiple formats.
-
 ## Features
 
 - Convert EPUB books to high-quality audio files
@@ -18,10 +14,11 @@ A PyQt6-based application for converting EPUB books to audiobooks in multiple fo
 - Multiple voice options and speed control
 - GPU acceleration support
 - Simple and intuitive user interface
+- Automatic FFmpeg installation assistant
 
 ## Installation
 
-You can install AutobooksQTA directly from PyPI:
+You can install AudiobooksQTa directly from PyPI:
 
 ```bash
 pip install autiobooksqta
@@ -46,10 +43,26 @@ autiobooksqta
    - `mp3/` - Contains individual MP3 files for each chapter
    - `wav/` - Contains raw WAV files (if selected to keep)
 
+## FFmpeg Installation Assistant
+
+AudiobooksQTa requires FFmpeg to create audiobooks. If FFmpeg is not found on your system, the application will automatically detect this and offer to download and install it for you:
+
+![FFmpeg Installation Assistant](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/ffmpeg.png)
+
+### Features of the FFmpeg Assistant:
+
+- Automatic detection of missing FFmpeg installation
+- One-click download and installation option (recommended)
+- Links to official FFmpeg sources if you prefer manual installation
+- Clear instructions for manual installation
+- Option to continue without FFmpeg (with limited functionality)
+
+The assistant ensures you can get up and running quickly without having to manually configure FFmpeg.
+
 ## Requirements
 
 - Python 3.8+
-- FFmpeg (must be installed and available in your system PATH)
+- FFmpeg (automatically installed if missing)
 - PyQt6
 - Additional dependencies will be installed automatically
 
@@ -71,4 +84,4 @@ pip install -e .
 
 - GitHub: [https://github.com/scottpeterman/autiobooksqta](https://github.com/scottpeterman/autiobooksqta)
 - PyPI: [https://pypi.org/project/autiobooksqta/](https://pypi.org/project/autiobooksqta/)
-- Original Project: autiobooks https://github.com/plusuncold/autiobooks
+- Original Project: [autiobooks](https://github.com/plusuncold/autiobooks)
