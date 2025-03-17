@@ -5,7 +5,7 @@
 
 AudiobooksQT generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
 
-![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/Screenshot%202025-03-16%20133103.png)
+![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/app.png)
 
 ## Features
 
@@ -16,6 +16,8 @@ AudiobooksQT generates `.m4b` audiobooks from regular `.epub` e-books, using Kok
 - GPU acceleration support for faster processing (when available)
 - Clean, intuitive design with improved visual feedback
 - Maintains all the functionality of the original Autiobooks
+
+![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/opt.png)
 
 ## About the TTS Engine
 

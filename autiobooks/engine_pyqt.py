@@ -156,6 +156,7 @@ def create_m4b(chapter_files, filename, cover_image):
         subprocess.run([
             'ffmpeg',
             '-safe', '0',
+            '-y',
             '-f', 'concat',
             '-i', concat_file,
             '-i', 'chapters.txt',

@@ -14,11 +14,12 @@ import time
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                              QLabel, QPushButton, QCheckBox, QComboBox, QProgressBar,
                              QFileDialog, QScrollArea, QFrame, QMessageBox, QLineEdit,
-                             QGridLayout, QSizePolicy, QStatusBar, QSlider, QSplitter)
+                             QGridLayout, QSizePolicy, QStatusBar, QSlider, QSplitter, QDialog)
 from PyQt6.QtCore import Qt, QThread, pyqtSignal, QSize, QEvent, QTimer
 from PyQt6.QtGui import QPixmap, QFont, QIcon, QColor, QPalette
 
 from autiobooks.audio_monitor_worker import AudioMonitorWorker
+from autiobooks.output_options import OutputOptionsDialog
 # Import from the engine module
 from autiobooks.engine_pyqt import (get_gpu_acceleration_available, gen_audio_segments,
 
@@ -938,6 +939,17 @@ class AudiobooksApp(QMainWindow):
                 checkbox.setChecked(True)
             chapters_selected = list(self.chapter_checkboxes.keys())
 
+        # Show the output options dialog
+        output_dialog = OutputOptionsDialog(self)
+        # Set the file path so the dialog can use it for default output location
+        output_dialog.file_path = file_path
+
+        if output_dialog.exec() != QDialog.DialogCode.Accepted:
+            return
+
+        # Get the user's output options
+        output_options = output_dialog.get_options()
+
         # Disable controls during conversion
         self.speed_entry.setEnabled(False)
         self.speed_slider.setEnabled(False)
@@ -953,7 +965,17 @@ class AudiobooksApp(QMainWindow):
         use_gpu = self.gpu_acceleration.isChecked() if hasattr(self, "gpu_acceleration") else False
 
         self.conversion_worker = ConversionWorker(
-            self.book, chapters_selected, voice, speed, use_gpu, file_path
+            self.book,
+            chapters_selected,
+            voice,
+            speed,
+            use_gpu,
+            file_path,
+            output_folder=output_options['output_folder'],
+            create_m4b=output_options['create_m4b'],
+            create_mp3=output_options['create_mp3'],
+            mp3_quality=output_options['mp3_quality'],
+            keep_wav=output_options['keep_wav']
         )
         self.conversion_worker.progress_updated.connect(self.update_progress)
         self.conversion_worker.conversion_complete.connect(self.on_conversion_complete)
