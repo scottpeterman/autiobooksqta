@@ -71,3 +71,4 @@ pip install -e .
 
 - GitHub: [https://github.com/scottpeterman/autiobooksqta](https://github.com/scottpeterman/autiobooksqta)
 - PyPI: [https://pypi.org/project/autiobooksqta/](https://pypi.org/project/autiobooksqta/)
+- Original Project: autiobooks https://github.com/plusuncold/autiobooks
