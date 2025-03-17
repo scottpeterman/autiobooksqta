@@ -1,95 +1,73 @@
-# AudiobooksQT: Automatically Convert EPUBs to Audiobooks
-[![Installing via pip and running](https://github.com/plusuncold/autiobooks/actions/workflows/pip-install.yaml/badge.svg)](https://github.com/plusuncold/autiobooks/actions/workflows/pip-install.yaml)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/autiobooks)
-![PyPI - Version](https://img.shields.io/pypi/v/autiobooks)
+# AudiobooksQTa: Automatically Convert EPUBs to Audiobooks
 
-AudiobooksQT generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
+AudiobooksQTa generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
 
 ![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/app.png)
 
+![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/options.png)
+
+# AutobooksQTA
+
+A PyQt6-based application for converting EPUB books to audiobooks in multiple formats.
+
 ## Features
 
-- Modern, responsive user interface built with PyQt6
-- Live audio previews of chapters before conversion
-- Voice speed adjustment with real-time controls
-- Easy chapter selection with word count and content preview
-- GPU acceleration support for faster processing (when available)
-- Clean, intuitive design with improved visual feedback
-- Maintains all the functionality of the original Autiobooks
+- Convert EPUB books to high-quality audio files
+- Create M4B audiobooks with chapters
+- Export to MP3 with customizable quality settings
+- Multiple voice options and speed control
+- GPU acceleration support
+- Simple and intuitive user interface
 
-![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/opt.png)
+## Installation
 
-## About the TTS Engine
-
-[Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) is an open-weight text-to-speech model with 82 million parameters. It yields natural sounding output while being able to run on consumer hardware.
-
-It supports American, British English, French, Korean, Japanese and Mandarin (though we only support English for now) and a wide range of different [voices](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md) with different accents and prosody.
-
-## How to Install and Run
-
-If you have Python 3 on your computer, you can install it with pip.
-Be aware that it won't work with Python 3.13.
+You can install AutobooksQTA directly from PyPI:
 
 ```bash
-pip install autiobooksqt
+pip install autiobooksqta
 ```
 
-### Dependencies
+## Usage
 
-You will require `ffmpeg` installed:
-
-**Linux:**
-```bash
-sudo apt install ffmpeg
-```
-
-**MacOS:**
-```bash
-brew install ffmpeg
-```
-
-**Windows:**
-Download from [FFmpeg's official site](https://ffmpeg.org/download.html) or install via package managers like Chocolatey or Scoop.
-
-Also recommended is `espeak-ng` for better processing of unknown words.
-
-### Running the Application
-
-To start the program, run:
+After installation, you can run the application with:
 
 ```bash
-python3 -m autiobooksqt
+autiobooksqta
 ```
 
-The program creates .wav files for each chapter, then combines them into a .m4b file for playing using an audiobook player.
+### Converting a Book
 
-## Differences from Original Autiobooks
+1. Open an EPUB file using the file selector
+2. Choose your voice preferences and output settings
+3. Select which chapters to convert
+4. Click "Convert" to start the process
+5. Find your audiobook files in organized subfolders:
+   - `m4b/` - Contains the complete audiobook in M4B format
+   - `mp3/` - Contains individual MP3 files for each chapter
+   - `wav/` - Contains raw WAV files (if selected to keep)
 
-- Complete rewrite of the UI using PyQt6 instead of Tkinter
-- Added real-time audio preview functionality
-- Improved chapter selection interface with content previews
-- Enhanced visual design with modern styling
-- Better error handling and feedback
-- More responsive UI during long operations
-- Maintains compatibility with the original Kokoro TTS backend
+## Requirements
 
-## Changelog
+- Python 3.8+
+- FFmpeg (must be installed and available in your system PATH)
+- PyQt6
+- Additional dependencies will be installed automatically
 
-#### 0.1.0
-- Initial release of PyQt6 port
-- Added chapter preview functionality
-- Redesigned UI for better user experience
-- Improved error handling and user feedback
+## Development
 
-## Contributing
+To contribute to this project:
 
-PRs are welcome! This project is open to contributions and improvements.
+```bash
+git clone https://github.com/scottpeterman/autiobooksqta.git
+cd autiobooksqta
+pip install -e .
+```
 
-GitHub Repository: [github.com/scottpeterman/autiobooksqta](https://github.com/scottpeterman/autiobooksqta)
+## License
 
-## Credits
+[GNU General Public License v3.0 (GPLv3)](LICENSE)
 
-Original Autiobooks by David Nesbitt (distributed under MIT license).
-PyQt6 port by Scott Peterman.
+## Links
 
-Distributed under GPLv3 license due to PyQt6 licensing requirements.
+- GitHub: [https://github.com/scottpeterman/autiobooksqta](https://github.com/scottpeterman/autiobooksqta)
+- PyPI: [https://pypi.org/project/autiobooksqta/](https://pypi.org/project/autiobooksqta/)
