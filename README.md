@@ -1,10 +1,10 @@
-# AudiobooksQTa: Automatically Convert EPUBs to Audiobooks
+# AutiobooksQTa: Automatically Convert EPUBs to Autiobooks
 
-AudiobooksQTa generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
+AutiobooksQTa generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
 
-![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/app.png)
+![AutiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/app.png)
 
-![AudiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/options.png)
+![AutiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/options.png)
 
 ## Features
 
@@ -18,7 +18,7 @@ AudiobooksQTa generates `.m4b` audiobooks from regular `.epub` e-books, using Ko
 
 ## Installation
 
-You can install AudiobooksQTa directly from PyPI:
+You can install AutiobooksQTa directly from PyPI:
 
 ```bash
 pip install autiobooksqta
@@ -45,7 +45,7 @@ autiobooksqta
 
 ## FFmpeg Installation Assistant
 
-AudiobooksQTa requires FFmpeg to create audiobooks. If FFmpeg is not found on your system, the application will automatically detect this and offer to download and install it for you:
+AutiobooksQTa requires FFmpeg to create audiobooks. If FFmpeg is not found on your system, the application will automatically detect this and offer to download and install it for you:
 
 ![FFmpeg Installation Assistant](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/ffmpeg.png)
 
