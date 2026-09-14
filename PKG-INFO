@@ -1,0 +1,209 @@
+Metadata-Version: 2.2
+Name: autiobooksqta
+Version: 0.1.0
+Summary: A PyQt6-based application for converting EPUB books to audiobooks
+Home-page: https://github.com/scottpeterman/autiobooksqta
+Author: Scott Peterman
+Author-email: scottpeterman@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: annotated-types>=0.7.0
+Requires-Dist: attrs>=25.3.0
+Requires-Dist: babel>=2.17.0
+Requires-Dist: beautifulsoup4>=4.13.3
+Requires-Dist: blis>=1.2.0
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: catalogue>=2.0.10
+Requires-Dist: certifi>=2025.1.31
+Requires-Dist: cffi>=1.17.1
+Requires-Dist: charset-normalizer>=3.4.1
+Requires-Dist: click>=8.1.8
+Requires-Dist: cloudpathlib>=0.21.0
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: confection>=0.1.5
+Requires-Dist: csvw>=3.5.1
+Requires-Dist: curated-tokenizers>=0.0.9
+Requires-Dist: curated-transformers>=0.1.1
+Requires-Dist: cymem>=2.0.11
+Requires-Dist: dlinfo>=2.0.0
+Requires-Dist: docopt>=0.6.2
+Requires-Dist: EbookLib>=0.18
+Requires-Dist: espeakng-loader>=0.2.4
+Requires-Dist: filelock>=3.17.0
+Requires-Dist: fsspec>=2025.3.0
+Requires-Dist: huggingface-hub>=0.29.3
+Requires-Dist: idna>=3.10
+Requires-Dist: isodate>=0.7.2
+Requires-Dist: Jinja2>=3.1.6
+Requires-Dist: joblib>=1.4.2
+Requires-Dist: jsonschema>=4.23.0
+Requires-Dist: jsonschema-specifications>=2024.10.1
+Requires-Dist: kokoro>=0.7.16
+Requires-Dist: langcodes>=3.5.0
+Requires-Dist: language-tags>=1.2.0
+Requires-Dist: language_data>=1.3.0
+Requires-Dist: loguru>=0.7.3
+Requires-Dist: lxml>=5.3.1
+Requires-Dist: marisa-trie>=1.2.1
+Requires-Dist: markdown-it-py>=3.0.0
+Requires-Dist: MarkupSafe>=3.0.2
+Requires-Dist: mdurl>=0.1.2
+Requires-Dist: misaki>=0.8.4
+Requires-Dist: mpmath>=1.3.0
+Requires-Dist: murmurhash>=1.0.12
+Requires-Dist: networkx>=3.4.2
+Requires-Dist: num2words>=0.5.14
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: packaging>=24.2
+Requires-Dist: phonemizer-fork>=3.3.2
+Requires-Dist: pillow>=11.1.0
+Requires-Dist: preshed>=3.0.9
+Requires-Dist: pycparser>=2.22
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pydantic_core>=2.27.2
+Requires-Dist: pygame>=2.6.1
+Requires-Dist: Pygments>=2.19.1
+Requires-Dist: pyparsing>=3.2.1
+Requires-Dist: PyQt6>=6.8.1
+Requires-Dist: PyQt6-Qt6>=6.8.2
+Requires-Dist: PyQt6_sip>=13.10.0
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: PyYAML>=6.0.2
+Requires-Dist: rdflib>=7.1.3
+Requires-Dist: referencing>=0.36.2
+Requires-Dist: regex>=2024.11.6
+Requires-Dist: requests>=2.32.3
+Requires-Dist: rfc3986>=1.5.0
+Requires-Dist: rich>=13.9.4
+Requires-Dist: rpds-py>=0.23.1
+Requires-Dist: safetensors>=0.5.3
+Requires-Dist: scipy>=1.15.2
+Requires-Dist: segments>=2.3.0
+Requires-Dist: setuptools>=76.0.0
+Requires-Dist: shellingham>=1.5.4
+Requires-Dist: six>=1.17.0
+Requires-Dist: smart-open>=7.1.0
+Requires-Dist: soundfile>=0.13.1
+Requires-Dist: soupsieve>=2.6
+Requires-Dist: spacy>=3.8.4
+Requires-Dist: spacy-curated-transformers>=0.3.0
+Requires-Dist: spacy-legacy>=3.0.12
+Requires-Dist: spacy-loggers>=1.0.5
+Requires-Dist: srsly>=2.5.1
+Requires-Dist: sympy>=1.13.1
+Requires-Dist: thinc>=8.3.4
+Requires-Dist: tk>=0.1.0
+Requires-Dist: tokenizers>=0.21.1
+Requires-Dist: torch>=2.6.0
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: transformers>=4.49.0
+Requires-Dist: typer>=0.15.2
+Requires-Dist: typing_extensions>=4.12.2
+Requires-Dist: uritemplate>=4.1.1
+Requires-Dist: urllib3>=2.3.0
+Requires-Dist: wasabi>=1.1.3
+Requires-Dist: weasel>=0.4.1
+Requires-Dist: win32_setctime>=1.2.0
+Requires-Dist: wrapt>=1.17.2
+Requires-Dist: spacy>=3.8.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AutiobooksQTa: Automatically Convert EPUBs to Autiobooks
+
+AutiobooksQTa generates `.m4b` audiobooks from regular `.epub` e-books, using Kokoro's high-quality speech synthesis. This is a PyQt6-based port of the original Autiobooks application, offering an enhanced user interface and additional features.
+
+![AutiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/app.png)
+
+![AutiobooksQT Interface](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/options.png)
+
+## Features
+
+- Convert EPUB books to high-quality audio files
+- Create M4B audiobooks with chapters
+- Export to MP3 with customizable quality settings
+- Multiple voice options and speed control
+- GPU acceleration support
+- Simple and intuitive user interface
+- Automatic FFmpeg installation assistant
+
+## Installation
+
+You can install AutiobooksQTa directly from PyPI:
+
+```bash
+pip install autiobooksqta
+```
+
+## Usage
+
+After installation, you can run the application with:
+
+```bash
+autiobooksqta
+```
+
+### Converting a Book
+
+1. Open an EPUB file using the file selector
+2. Choose your voice preferences and output settings
+3. Select which chapters to convert
+4. Click "Convert" to start the process
+5. Find your audiobook files in organized subfolders:
+   - `m4b/` - Contains the complete audiobook in M4B format
+   - `mp3/` - Contains individual MP3 files for each chapter
+   - `wav/` - Contains raw WAV files (if selected to keep)
+
+## FFmpeg Installation Assistant
+
+AutiobooksQTa requires FFmpeg to create audiobooks. If FFmpeg is not found on your system, the application will automatically detect this and offer to download and install it for you:
+
+![FFmpeg Installation Assistant](https://raw.githubusercontent.com/scottpeterman/autiobooksqta/refs/heads/main/screenshots/ffmpeg.png)
+
+### Features of the FFmpeg Assistant:
+
+- Automatic detection of missing FFmpeg installation
+- One-click download and installation option (recommended)
+- Links to official FFmpeg sources if you prefer manual installation
+- Clear instructions for manual installation
+- Option to continue without FFmpeg (with limited functionality)
+
+The assistant ensures you can get up and running quickly without having to manually configure FFmpeg.
+
+## Requirements
+
+- Python 3.8+
+- FFmpeg (automatically installed if missing)
+- PyQt6
+- Additional dependencies will be installed automatically
+
+## Development
+
+To contribute to this project:
+
+```bash
+git clone https://github.com/scottpeterman/autiobooksqta.git
+cd autiobooksqta
+pip install -e .
+```
+
+## License
+
+[GNU General Public License v3.0 (GPLv3)](LICENSE)
+
+## Links
+
+- GitHub: [https://github.com/scottpeterman/autiobooksqta](https://github.com/scottpeterman/autiobooksqta)
+- PyPI: [https://pypi.org/project/autiobooksqta/](https://pypi.org/project/autiobooksqta/)
+- Original Project: [autiobooks](https://github.com/plusuncold/autiobooks)
